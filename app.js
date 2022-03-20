@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 const port = 8080;
 
+// Middleware static content
+
+// Here express is using my public folder
+app.use(express.static("public"));
+
 // Body of my request
 
 app.get("/", (req, res) => {

@@ -5,14 +5,16 @@ const port = 8080;
 // Middleware static content
 
 // Here express is using my public folder
+// This the path of my "/"
 app.use(express.static("public"));
 
 // Body of my request
 
-app.get("/", (req, res) => {
-  res.send("Home page here");
-});
+// app.get("/", (req, res) => {
+//   res.send("Home page here");
+// });
 
+// Here using my public to display my route hola-mundo
 app.get("/hello-mundo", (req, res) => {
   res.send("Hello World Working with express");
 });

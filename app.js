@@ -23,7 +23,8 @@ app.get("/hello-mundo", (req, res) => {
 // Error pages how to handle them
 
 app.get("*", (req, res) => {
-  res.send("Sorry Route still being built");
+  // I needed to send myself to a file and also add It's unique path using __dirname
+  res.sendFile(__dirname + "/public/404.html");
 });
 console.log("Listening in port ", 8080);
 
